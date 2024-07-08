@@ -19,8 +19,8 @@ public static class StandardExtensions
     public static DbUp.Builder.UpgradeEngineBuilder WithPreprocessor(this DbUp.Builder.UpgradeEngineBuilder builder, DbUp.Engine.IScriptPreprocessor preprocessor) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScript(this DbUp.Builder.UpgradeEngineBuilder builder, DbUp.Engine.SqlScript script) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScript(this DbUp.Builder.UpgradeEngineBuilder builder, string name, string contents) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScript(this DbUp.Builder.UpgradeEngineBuilder builder, string name, string contents, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScript(this DbUp.Builder.UpgradeEngineBuilder builder, string name, DbUp.Engine.IScript script) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScript(this DbUp.Builder.UpgradeEngineBuilder builder, string name, string contents, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScript(this DbUp.Builder.UpgradeEngineBuilder builder, string name, DbUp.Engine.IScript script, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptNameComparer(this DbUp.Builder.UpgradeEngineBuilder builder, System.Collections.Generic.IComparer<string> comparer) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScripts(this DbUp.Builder.UpgradeEngineBuilder builder, DbUp.Engine.IScriptProvider scriptProvider) { }
@@ -33,32 +33,34 @@ public static class StandardExtensions
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsAndCodeEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsAndCodeEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsAndCodeEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, System.Func<string, bool> codeScriptFilter) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsAndCodeEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, System.Func<string, bool> codeScriptFilter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsAndCodeEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsAndCodeEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, System.Func<string, bool> codeScriptFilter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies, System.Func<string, bool> filter) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies, System.Func<string, bool> filter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies, System.Text.Encoding encoding) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies, System.Func<string, bool> filter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies, System.Func<string, bool> filter, System.Text.Encoding encoding) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssemblies(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly[] assemblies, System.Func<string, bool> filter, System.Text.Encoding encoding, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Text.Encoding encoding) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Text.Encoding encoding, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, System.Text.Encoding encoding) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, System.Text.Encoding encoding, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsEmbeddedInAssembly(this DbUp.Builder.UpgradeEngineBuilder builder, System.Reflection.Assembly assembly, System.Func<string, bool> filter, System.Text.Encoding encoding, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Func<string, bool> filter) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Func<string, bool> filter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Text.Encoding encoding) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, DbUp.ScriptProviders.FileSystemScriptOptions options) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Func<string, bool> filter, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Text.Encoding encoding, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Func<string, bool> filter, System.Text.Encoding encoding) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, DbUp.ScriptProviders.FileSystemScriptOptions options, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, System.Func<string, bool> filter, System.Text.Encoding encoding, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
-    public static DbUp.Builder.UpgradeEngineBuilder WithScriptsFromFileSystem(this DbUp.Builder.UpgradeEngineBuilder builder, string path, DbUp.ScriptProviders.FileSystemScriptOptions options) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithTransaction(this DbUp.Builder.UpgradeEngineBuilder builder) { }
+    public static DbUp.Builder.UpgradeEngineBuilder WithTransactionAlwaysRollback(this DbUp.Builder.UpgradeEngineBuilder builder) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithTransactionPerScript(this DbUp.Builder.UpgradeEngineBuilder builder) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithVariable(this DbUp.Builder.UpgradeEngineBuilder builder, string variableName, string value) { }
     public static DbUp.Builder.UpgradeEngineBuilder WithVariables(this DbUp.Builder.UpgradeEngineBuilder builder, System.Collections.Generic.IDictionary<string, string> variables) { }
@@ -129,18 +131,22 @@ namespace DbUp.Builder
     }
     public class UpgradeEngineBuilder
     {
+        protected readonly System.Collections.Generic.List<System.Action<DbUp.Builder.UpgradeConfiguration>> callbacks;
         public UpgradeEngineBuilder() { }
-        public DbUp.Engine.UpgradeEngine Build() { }
-        public DbUp.Builder.UpgradeConfiguration BuildConfiguration() { }
-        public void Configure(System.Action<DbUp.Builder.UpgradeConfiguration> configuration) { }
+        public virtual DbUp.Engine.UpgradeEngine Build() { }
+        public virtual DbUp.Builder.UpgradeConfiguration BuildConfiguration() { }
+        public virtual void Configure(System.Action<DbUp.Builder.UpgradeConfiguration> configuration) { }
     }
 }
 namespace DbUp.Engine
 {
     public sealed class DatabaseUpgradeResult
     {
+        [System.ObsoleteAttribute()]
         public DatabaseUpgradeResult(System.Collections.Generic.IEnumerable<DbUp.Engine.SqlScript> scripts, bool successful, System.Exception error) { }
+        public DatabaseUpgradeResult(System.Collections.Generic.IEnumerable<DbUp.Engine.SqlScript> scripts, bool successful, System.Exception error, DbUp.Engine.SqlScript errorScript) { }
         public System.Exception Error { get; }
+        public DbUp.Engine.SqlScript ErrorScript { get; }
         public System.Collections.Generic.IEnumerable<DbUp.Engine.SqlScript> Scripts { get; }
         public bool Successful { get; }
     }
@@ -196,7 +202,7 @@ namespace DbUp.Engine
         public SqlScript(string name, string contents) { }
         public SqlScript(string name, string contents, DbUp.Engine.SqlScriptOptions sqlScriptOptions) { }
         public virtual string Contents { get; }
-        public string Name { get; }
+        public virtual string Name { get; }
         public DbUp.Engine.SqlScriptOptions SqlScriptOptions { get; }
         public static DbUp.Engine.SqlScript FromFile(string path) { }
         public static DbUp.Engine.SqlScript FromFile(string path, System.Text.Encoding encoding) { }
@@ -214,18 +220,19 @@ namespace DbUp.Engine
     }
     public class UpgradeEngine
     {
+        protected readonly DbUp.Builder.UpgradeConfiguration configuration;
         public UpgradeEngine(DbUp.Builder.UpgradeConfiguration configuration) { }
         public event System.EventHandler ScriptExecuted;
-        public System.Collections.Generic.List<DbUp.Engine.SqlScript> GetDiscoveredScripts() { }
-        public System.Collections.Generic.List<string> GetExecutedButNotDiscoveredScripts() { }
-        public System.Collections.Generic.List<string> GetExecutedScripts() { }
-        public System.Collections.Generic.List<DbUp.Engine.SqlScript> GetScriptsToExecute() { }
-        public bool IsUpgradeRequired() { }
-        public DbUp.Engine.DatabaseUpgradeResult MarkAsExecuted() { }
-        public DbUp.Engine.DatabaseUpgradeResult MarkAsExecuted(string latestScript) { }
+        public virtual System.Collections.Generic.List<DbUp.Engine.SqlScript> GetDiscoveredScripts() { }
+        public virtual System.Collections.Generic.List<string> GetExecutedButNotDiscoveredScripts() { }
+        public virtual System.Collections.Generic.List<string> GetExecutedScripts() { }
+        public virtual System.Collections.Generic.List<DbUp.Engine.SqlScript> GetScriptsToExecute() { }
+        public virtual bool IsUpgradeRequired() { }
+        public virtual DbUp.Engine.DatabaseUpgradeResult MarkAsExecuted() { }
+        public virtual DbUp.Engine.DatabaseUpgradeResult MarkAsExecuted(string latestScript) { }
         protected virtual void OnScriptExecuted(DbUp.Engine.ScriptExecutedEventArgs e) { }
-        public DbUp.Engine.DatabaseUpgradeResult PerformUpgrade() { }
-        public bool TryConnect(out string errorMessage) { }
+        public virtual DbUp.Engine.DatabaseUpgradeResult PerformUpgrade() { }
+        public virtual bool TryConnect(out string errorMessage) { }
     }
 }
 namespace DbUp.Engine.Filters
@@ -304,14 +311,24 @@ namespace DbUp.Engine.Preprocessors
 }
 namespace DbUp.Engine.Transactions
 {
+    [System.FlagsAttribute()]
+    public enum AllowedTransactionMode : int
+    {
+        None = 0
+        SingleTransaction = 1
+        TransactionPerScript = 2
+        SingleTransactionAlwaysRollback = 4
+        All = 7
+    }
     public abstract class DatabaseConnectionManager : DbUp.Engine.Transactions.IConnectionManager
     {
         protected DatabaseConnectionManager(System.Func<DbUp.Engine.Output.IUpgradeLog, System.Data.IDbConnection> connectionFactory) { }
         protected DatabaseConnectionManager(DbUp.Engine.Transactions.IConnectionFactory connectionFactory) { }
+        protected virtual DbUp.Engine.Transactions.AllowedTransactionMode AllowedTransactionModes { get; }
         public bool IsScriptOutputLogged { get; set; }
         public DbUp.Engine.Transactions.TransactionMode TransactionMode { get; set; }
-        public void ExecuteCommandsWithManagedConnection(System.Action<System.Func<System.Data.IDbCommand>> action) { }
         public T ExecuteCommandsWithManagedConnection<T>(Func<System.Func<System.Data.IDbCommand>, T> actionWithResult) { }
+        public void ExecuteCommandsWithManagedConnection(System.Action<System.Func<System.Data.IDbCommand>> action) { }
         public System.IDisposable OperationStarting(DbUp.Engine.Output.IUpgradeLog upgradeLog, System.Collections.Generic.List<DbUp.Engine.SqlScript> executedScripts) { }
         public System.IDisposable OverrideFactoryForTest(DbUp.Engine.Transactions.IConnectionFactory connectionFactory) { }
         public abstract System.Collections.Generic.IEnumerable<string> SplitScriptIntoCommands(string scriptContents);
@@ -331,16 +348,16 @@ namespace DbUp.Engine.Transactions
     {
         bool IsScriptOutputLogged { get; set; }
         DbUp.Engine.Transactions.TransactionMode TransactionMode { get; set; }
-        void ExecuteCommandsWithManagedConnection(System.Action<System.Func<System.Data.IDbCommand>> action);
         T ExecuteCommandsWithManagedConnection<T>(Func<System.Func<System.Data.IDbCommand>, T> actionWithResult);
+        void ExecuteCommandsWithManagedConnection(System.Action<System.Func<System.Data.IDbCommand>> action);
         System.IDisposable OperationStarting(DbUp.Engine.Output.IUpgradeLog upgradeLog, System.Collections.Generic.List<DbUp.Engine.SqlScript> executedScripts);
         System.Collections.Generic.IEnumerable<string> SplitScriptIntoCommands(string scriptContents);
         bool TryConnect(DbUp.Engine.Output.IUpgradeLog upgradeLog, out string errorMessage);
     }
     public interface ITransactionStrategy : System.IDisposable
     {
-        void Execute(System.Action<System.Func<System.Data.IDbCommand>> action);
         T Execute<T>(Func<System.Func<System.Data.IDbCommand>, T> actionWithResult);
+        void Execute(System.Action<System.Func<System.Data.IDbCommand>> action);
         void Initialise(System.Data.IDbConnection dbConnection, DbUp.Engine.Output.IUpgradeLog upgradeLog, System.Collections.Generic.List<DbUp.Engine.SqlScript> executedScripts);
     }
     public enum TransactionMode : int
@@ -348,6 +365,7 @@ namespace DbUp.Engine.Transactions
         NoTransaction = 0
         SingleTransaction = 1
         TransactionPerScript = 2
+        SingleTransactionAlwaysRollback = 3
     }
 }
 namespace DbUp.Helpers
@@ -404,6 +422,7 @@ namespace DbUp.ScriptProviders
         public string[] Extensions { get; set; }
         public System.Func<string, bool> Filter { get; set; }
         public bool IncludeSubDirectories { get; set; }
+        public bool UseOnlyFilenameForScriptName { get; set; }
     }
     public class FileSystemScriptProvider : DbUp.Engine.IScriptProvider
     {
@@ -431,6 +450,7 @@ namespace DbUp.Support
         public System.Nullable<int> ExecutionTimeoutSeconds { get; set; }
         protected System.Func<DbUp.Engine.Output.IUpgradeLog> Log { get; }
         public string Schema { get; set; }
+        protected virtual bool UseTheSameTransactionForJournalTableAndScripts { get; }
         public virtual void Execute(DbUp.Engine.SqlScript script) { }
         public virtual void Execute(DbUp.Engine.SqlScript script, System.Collections.Generic.IDictionary<string, string> variables) { }
         protected virtual void ExecuteAndLogOutput(System.Data.IDbCommand command) { }
@@ -526,7 +546,7 @@ namespace DbUp.Support
         protected System.Data.IDbCommand GetCreateTableCommand(System.Func<System.Data.IDbCommand> dbCommandFactory) { }
         public string[] GetExecutedScripts() { }
         protected abstract string GetInsertJournalEntrySql(string scriptName, string applied);
-        protected System.Data.IDbCommand GetInsertScriptCommand(System.Func<System.Data.IDbCommand> dbCommandFactory, DbUp.Engine.SqlScript script) { }
+        protected virtual System.Data.IDbCommand GetInsertScriptCommand(System.Func<System.Data.IDbCommand> dbCommandFactory, DbUp.Engine.SqlScript script) { }
         protected System.Data.IDbCommand GetJournalEntriesCommand(System.Func<System.Data.IDbCommand> dbCommandFactory) { }
         protected abstract string GetJournalEntriesSql();
         protected virtual void OnTableCreated(System.Func<System.Data.IDbCommand> dbCommandFactory) { }
